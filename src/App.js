@@ -6,6 +6,7 @@ import { Signin } from "./State uplifting/Signin";
 import { Welcome } from "./State uplifting/Welcome";
 import "./App.css";
 import { useSelector } from "react-redux";
+import { Events } from "./Events/Events";
 
 function PrivateRoute({ isLoggedin, children }) {
   if (isLoggedin) {
@@ -31,9 +32,12 @@ function App() {
   return (
     <>
       <div className="App">
-        <h4>Total Quantity: {count}</h4>
+        <Events />
 
-        <Count />
+        {/* Redux */}
+        {/* <h4>Total Quantity: {count}</h4>
+
+        <Count /> */}
       </div>
 
       {/* <Header />
