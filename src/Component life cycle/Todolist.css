@@ -1,0 +1,32 @@
+.todolist {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.todolist__input {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 5px;
+  background-color: lightcyan;
+  border-radius: 5px;
+}
+
+#lists {
+  background-color: lightgray;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+#lists div {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+#lists div h4 {
+  color: black;
+}

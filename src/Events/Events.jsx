@@ -20,8 +20,10 @@ export const Events = () => {
       <br />
       {status && <div>Name: {name}</div>}
       <br />
+      {/* onChange  Events */}
       <input type="text" onChange={nameHandler} placeholder="Name" />
       <br />
+      {/* onClick Events */}
       <button onClick={clickHandler}>Click me </button>
     </div>
   );

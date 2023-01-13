@@ -7,6 +7,8 @@ import { Welcome } from "./State uplifting/Welcome";
 import "./App.css";
 import { useSelector } from "react-redux";
 import { Events } from "./Events/Events";
+import { Controlled } from "./Events/Controlled and uncontrolled/Controlled";
+import { Todolist } from "./Component life cycle/Todolist";
 
 function PrivateRoute({ isLoggedin, children }) {
   if (isLoggedin) {
@@ -32,12 +34,14 @@ function App() {
   return (
     <>
       <div className="App">
-        <Events />
-
+        {/* Events */}
+        {/* <Events /> */}
+        {/* <Controlled /> */}
+        {/* <Todolist /> */}
         {/* Redux */}
-        {/* <h4>Total Quantity: {count}</h4>
+        <h4>Total Quantity: {count}</h4>
 
-        <Count /> */}
+        <Count />
       </div>
 
       {/* <Header />
