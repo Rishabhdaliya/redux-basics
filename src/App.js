@@ -1,14 +1,20 @@
 import { useState } from "react";
-import { Routes, Route, useLocation, Navigate } from "react-router-dom";
+import { Routes, Route, Link, useLocation, Navigate } from "react-router-dom";
 import { Count } from "./redux/Component/Count";
-import { Header } from "./State uplifting/Header";
 import { Signin } from "./State uplifting/Signin";
 import { Welcome } from "./State uplifting/Welcome";
 import "./App.css";
 import { useSelector } from "react-redux";
 import { Events } from "./Events/Events";
 import { Controlled } from "./Events/Controlled and uncontrolled/Controlled";
-import { Todolist } from "./Component life cycle/Todolist";
+// import { Todolist } from "./Component life cycle/Todolist";
+import Headers from "./Routing/Headers";
+import { Home } from "./Routing/Home";
+import { About } from "./Routing/About";
+import { Product } from "./Routing/Product";
+import { Services } from "./Routing/Services";
+import { Contact } from "./Routing/Contact";
+import { ProductDetail } from "./Routing/ProductDe/ProductDetail";
 
 function PrivateRoute({ isLoggedin, children }) {
   if (isLoggedin) {
@@ -26,10 +32,10 @@ function PublicRoute({ isLoggedin, children }) {
 }
 
 function App() {
-  // const [name, setName] = useState();
-  // const [password, setPassword] = useState();
-  // const [isLoggedin, setIsLoggedin] = useState(false);
-  const count = useSelector((state) => state.count);
+  const [name, setName] = useState();
+  const [password, setPassword] = useState();
+  const [isLoggedin, setIsLoggedin] = useState(false);
+  // const count = useSelector((state) => state.count);
 
   return (
     <>
@@ -39,12 +45,21 @@ function App() {
         {/* <Controlled /> */}
         {/* <Todolist /> */}
         {/* Redux */}
-        <h4>Total Quantity: {count}</h4>
+        {/* <h4>Total Quantity: {count}</h4>
+        <Count /> */}
+        <Headers />
 
-        <Count />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<About />} />
+          <Route path="/products" element={<Product />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact-us" element={<Contact />} />
+          <Route path="/*" element={<h4>404 Error Occured</h4>} />
+          <Route path="/products/:title/:_id/buy" element={<ProductDetail />} />
+        </Routes>
       </div>
-
-      {/* <Header />
+      {/*    
       <Routes>
         <Route
           path="/"
@@ -70,7 +85,7 @@ function App() {
             </PrivateRoute>
           }
         />
-      </Routes> */}
+      </Routes>{" "} */}
     </>
   );
 }

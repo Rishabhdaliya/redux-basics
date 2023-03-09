@@ -15,7 +15,7 @@ export const Signin = ({
     if (!name || !password) {
       alert("Can't submit with Empty fields");
     } else {
-      if (name === "athar" && password === "123456") {
+      if (name === "rishabh" && password === "123456") {
         alert("successfully Logged in");
         setIsLoggedin(true);
       } else {

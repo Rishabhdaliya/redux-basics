@@ -27,7 +27,7 @@ export const Product = () => {
 
   const productDetailhandler = (_id, title) => {
     if (_id) {
-      navigate(`/products/${_id}/${title}`);
+      navigate(`/products/${title}/${_id}/buy`);
     }
   };
 
