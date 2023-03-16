@@ -23,14 +23,39 @@ export const Signin = ({
       }
     }
   };
-  if (isLoggedin) {
-    return <Navigate to="/home" />;
-  }
+
+  console.log(isLoggedin);
+  const nameHandler = (event) => {
+    setName(event.target.value);
+  };
+  const passwordHandler = (event) => {
+    setPassword(event.target.value);
+  };
 
   return (
     <div>
       <div className="signin">
-        <h1>Signin</h1>
+        <h4>Signin</h4>
+        <input
+          placeholder="UserName"
+          value={name}
+          onChange={nameHandler}
+          type="text"
+        />
+        <input
+          placeholder="Password"
+          value={password}
+          onChange={passwordHandler}
+          type="password"
+        />
+        <button onClick={submitHandler}>Login</button>
+      </div>
+    </div>
+  );
+};
+
+{
+  /* <h1>Signin</h1>
         <input
           placeholder="Username"
           onChange={(e) => setName(e.target.value)}
@@ -43,11 +68,10 @@ export const Signin = ({
         />
         <button onClick={submitHandler} type="submit">
           Signin
-        </button>
+        </button> */
+}
 
-        {name && <p>Name: {name}</p>}
-        {password && <p>Password: {password}</p>}
-      </div>
-    </div>
-  );
-};
+{
+  /* {name && <p>Name: {name}</p>}
+        {password && <p>Password: {password}</p>} */
+}

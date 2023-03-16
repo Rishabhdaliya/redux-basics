@@ -7,10 +7,11 @@ export const reducer = (state = initialState, action) => {
     case "INCREMENT":
       debugger;
       return {
-        count: state.count + action.payload,
+        count: state.count + action.payload, // count = 0 + 10 => 10
       };
     case "DECREMENT":
       debugger;
+
       return {
         count: state.count - action.payload,
       };

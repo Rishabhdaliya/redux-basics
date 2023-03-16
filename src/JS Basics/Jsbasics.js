@@ -51,12 +51,12 @@
 // a.shift();
 
 // a.map((elm) => console.log(elm));
-let a = [2, 12, 2, 15];
-const filteredArray = a.filter((curElm) => curElm <= 15);
+// let a = [2, 12, 2, 15];
+// const filteredArray = a.filter((curElm) => curElm <= 15);
 
-a[1] = a[1] + 5;
-console.log(a);
-// 1
+// a[1] = a[1] + 5;
+// console.log(a);
+// // 1
 // 4
 // 9
 // 16
@@ -119,3 +119,13 @@ console.log(a);
 // myArray[1] = myElement;
 
 // // console.log(myArray);
+
+const props = {
+  name: "rishabh",
+  age: 25,
+  city: "Nagpur",
+};
+
+const { name, age, city } = student;
+
+console.log(name, city);

@@ -15,6 +15,7 @@ import { Product } from "./Routing/Product";
 import { Services } from "./Routing/Services";
 import { Contact } from "./Routing/Contact";
 import { ProductDetail } from "./Routing/ProductDe/ProductDetail";
+import { View } from "./redux/Component/View";
 
 function PrivateRoute({ isLoggedin, children }) {
   if (isLoggedin) {
@@ -35,19 +36,22 @@ function App() {
   const [name, setName] = useState();
   const [password, setPassword] = useState();
   const [isLoggedin, setIsLoggedin] = useState(false);
-  // const count = useSelector((state) => state.count);
+  const count = useSelector((state) => state.count);
 
   return (
     <>
       <div className="App">
-        {/* Events */}
-        {/* <Events /> */}
-        {/* <Controlled /> */}
-        {/* <Todolist /> */}
-        {/* Redux */}
-        {/* <h4>Total Quantity: {count}</h4>
+        <h1>Total: {count}</h1>
+        <View />
+      </div>
+      {/* Events */}
+      {/* <Events /> */}
+      {/* <Controlled /> */}
+      {/* <Todolist /> */}
+      {/* Redux */}
+      {/* <h4>Total Quantity: {count}</h4>
         <Count /> */}
-        <Headers />
+      {/* <Headers />
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -58,9 +62,8 @@ function App() {
           <Route path="/*" element={<h4>404 Error Occured</h4>} />
           <Route path="/products/:title/:_id/buy" element={<ProductDetail />} />
         </Routes>
-      </div>
-      {/*    
-      <Routes>
+      </div> */}
+      {/* <Routes>
         <Route
           path="/"
           element={
@@ -78,14 +81,13 @@ function App() {
         />
         <Route
           path="/home"
-          isLoggedin={isLoggedin}
           element={
             <PrivateRoute isLoggedin={isLoggedin}>
               <Welcome setIsLoggedin={setIsLoggedin} isLoggedin={isLoggedin} />
             </PrivateRoute>
           }
         />
-      </Routes>{" "} */}
+      </Routes> */}
     </>
   );
 }
